@@ -1,8 +1,88 @@
 *{
     padding: 0;
     margin: 0;
+    
 }
 
 body{
-    background: url(../img/Background-gamers.jpg) no-repeat;
+    background: url(../img/Background-gamers2.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+.principal{
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 40vh;
+}
+
+.separacion{
+    padding: 20px;
+}
+
+.login{
+    width: 270px;
+    height: 100%;
+    border: 2px solid antiquewhite;
+    padding: 10px;
+}
+
+.espada1{
+    width: 60px; 
+    height: 60px;
+    background: url(../img/espada.png) no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.espada2{
+    width: 60px; 
+    height: 60px;
+    background: url(../img/espada.png) no-repeat;
+    background-size: cover;
+    transform: scaleX(-1);
+    margin-left: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 8px;
+    width: 250px;
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid antiquewhite;
+    color: #fff;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    margin-left: 20px;
+    color: #fff;
+    cursor: pointer;
+    border: none; /* Elimina el borde predeterminado */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    outline: 2px solid #fff; /* Línea de contorno para simular el efecto pixelado */
+    box-shadow: 0 0 0 2px #3498db, 0 0 0 4px #fff;
+    text-shadow: 1px 1px #000; /* Sombra de texto para simular el efecto pixelado */
+    animation: pixelate 1s infinite alternate; /* Animación para simular el efecto pixelado */
+}
+
+@keyframes pixelate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
