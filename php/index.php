@@ -1,3 +1,43 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['nombre_us'])) {
+    // El usuario no ha iniciado sesión, redirige a la página de login
+    header('Location: ../index.html');
+    exit();
+}
+
+include("online.php");
+
+$username = $_SESSION['nombre_us'];
+
+
+// Consulta SQL para obtener la información del usuario
+$sql = "SELECT usuario.nombre_us 
+FROM usuario 
+WHERE nombre_us = '$username'";
+$query = mysqli_query($online, $sql);
+
+if ($query) {
+    if (mysqli_num_rows($query) == 1) {
+        $user_data = mysqli_fetch_assoc($query);
+        // Muestra la información del usuario en la página de perfil
+        // Muestra otros campos aquí
+    } else {
+        // Maneja el caso en el que el usuario no existe
+        echo "Usuario no encontrado.";
+    }
+} else {
+    // Maneja el caso de error en la consulta SQL
+    echo "Error en la consulta SQL.";
+}
+
+
+echo $username;
+  ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
