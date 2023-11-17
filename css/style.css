@@ -1,56 +1,72 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
-    background-color: brown;
+body {
+    background-color: #1a1a1a;
 }
 
-.barra{
-    background-color: black;
-    padding: 50px;
-}
-
-.intefaz{
-    width: 60%;
-    background-color: peru;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 4px;
-}
-
-.dentro{
-    text-align: center;
-    border: 15px solid saddlebrown;
+.barra {
+    background-color: #000;
     padding: 20px;
 }
 
-.titulo{
+.usuario {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    padding: 40px;
+    background-color: #784c94;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agregamos sombra */
+}
+
+
+.intefaz {
+    width: 60%;
+    background-color: #2c3e50;
+    margin-top: 100px; /* Disminuimos el espacio entre la barra y la sección "intefaz" */
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px; /* Ajustamos el padding */
+    border: 5px solid #34495e; /* Borde más oscuro */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Agregamos sombra */
+}
+
+.dentro {
+    text-align: center;
+    border: 15px solid #784c94;
+    padding: 20px;
+}
+
+.titulo {
     width: 20%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    font-family: fantasy;
-    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
     font-weight: bold;
     padding: 20px;
-    background-color: rgb(102, 80, 58);
+    background-color: #784c94;
     border-radius: 10px;
+    color: #fff;
 }
 
-.inventario{
-    margin-top: 100px;
+.inventario {
+    margin-top: 20px; /* Reducimos el espacio entre el título y la sección de inventario */
     padding: 20px;
-    border: 5px solid saddlebrown;
+    border: 5px solid #784c94;
     border-radius: 10px;
-   
 }
 
-.cajitas{
-    
+.cajitas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -59,14 +75,87 @@ body{
 .cuadrado {
     width: 100px;
     height: 100px;
-    margin: 10px; /* Margen entre los cuadrados */
-    border: 2px solid saddlebrown;
+    margin: 10px;
+    border: 2px solid #784c94;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive;
     font-size: 14px;
     font-weight: bold;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
 }
 
+.cuadrado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nombre-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cuadrado:hover .nombre-overlay {
+    opacity: 1;
+}
+
+
+/*Para la pagina de agregar item*/
+
+.formulario-agregar {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.formulario-agregar form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-agregar label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.formulario-agregar input,
+.formulario-agregar textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #784c94;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.formulario-agregar button {
+    background-color: #784c94;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-agregar button:hover {
+    background-color: #6c407e;
+}
