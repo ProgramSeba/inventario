@@ -1,0 +1,32 @@
+.enlace{
+    padding: 8px;
+    width: 250px;
+    border: 1px solid antiquewhite;
+    background-color: red;
+    margin-left: 50px;
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    outline: 2px solid #fff; /* Línea de contorno para simular el efecto pixelado */
+    box-shadow: 0 0 0 2px #3498db, 0 0 0 4px #fff;
+    text-shadow: 1px 1px #000; /* Sombra de texto para simular el efecto pixelado */
+    animation: pixelate 1s infinite alternate; /* Animación para simular el efecto pixelado */
+}
+
+.enlace a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@keyframes pixelate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

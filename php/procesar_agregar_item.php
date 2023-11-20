@@ -47,7 +47,12 @@ if ($_FILES['foto_item']['error'] == 0) {
     $foto_item = uniqid('img_') . '.' . $foto_extension;
 
     // Mover la imagen a la carpeta de destino
-    move_uploaded_file($foto_temp, '../img/imagen_item/' . $foto_item);
+    if (move_uploaded_file($foto_temp, '../img/imagen_item/' . $foto_item)) {
+        echo "Imagen cargada correctamente.";
+    } else {
+        echo "Error al cargar la imagen.";
+    }
+    
 }
 
 // Insertar los datos en la base de datos
@@ -66,6 +71,7 @@ if ($query_item) {
         echo "Error al crear la relación usuario-item: " . mysqli_error($online);
     } else {
         echo "Item agregado correctamente.";
+        header('Location: index.php');
     }
 } else {
     echo "Error al agregar el item.";

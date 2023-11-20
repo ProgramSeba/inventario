@@ -86,3 +86,10 @@ input[type="submit"] {
         transform: scale(1);
     }
 }
+
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para pantallas pequeñas */
+    body {
+      font-size: 14px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+  }
